@@ -1,0 +1,98 @@
+diff -Nuard magicdev.orig/po/pl.po magicdev/po/pl.po
+--- magicdev.orig/po/pl.po	2003-03-04 21:44:10.000000000 +0100
++++ magicdev/po/pl.po	2003-12-20 16:50:11.919319768 +0100
+@@ -18,60 +18,60 @@
+ "Content-Transfer-Encoding: 8bit\n"
+ 
+ #: cd-capplet.glade.h:1
++msgid "    "
++msgstr "    "
++
++#: cd-capplet.glade.h:2
+ msgid "*"
+ msgstr "*"
+ 
+-#: cd-capplet.glade.h:1
+-msgid "Audio CDs"
+-msgstr "Płyty CD-audio"
++#: cd-capplet.glade.h:3
++msgid "<b>Audio CDs</b>"
++msgstr "<b>Płyty CD-Audio</b>"
+ 
+-#: cd-capplet.glade.h:1
+-msgid "Blank CDs"
+-msgstr "Puste płyty CD"
++#: cd-capplet.glade.h:4
++msgid "<b>Blank CDs</b>"
++msgstr "<b>Puste płyty CD</b>"
+ 
+-#: cd-capplet.glade.h:1
++#: cd-capplet.glade.h:5
++msgid "<b>DVD (Video)</b>"
++msgstr "<b>DVD (wideo)</b>"
++
++#: cd-capplet.glade.h:6
++msgid "<b>Data Discs</b>"
++msgstr "<b>Płyty CD-ROM</b>"
++
++#: cd-capplet.glade.h:7
+ msgid "CD and DVD Preferences"
+ msgstr "Ustawienia CD i DVD"
+ 
+-#: cd-capplet.glade.h:1
++#: cd-capplet.glade.h:8
+ msgid "Command:"
+ msgstr "Polecenie:"
+ 
+-#: cd-capplet.glade.h:1
+-msgid "DVD (Video)"
+-msgstr "DVD (wideo)"
+-
+-#: cd-capplet.glade.h:1
+-msgid "Data CDs"
+-msgstr "Płyty CD-ROM"
+-
+-#: cd-capplet.glade.h:1
+-msgid "Open file manager window for _newly mounted CD"
+-msgstr "Otwarcie _nowego okna menedżera plików po zamontowaniu płyty"
+-
+-#: cd-capplet.glade.h:1
+-msgid "Run command when _CD is inserted"
+-msgstr "_Wykonanie polecenia po włożeniu płyty"
+-
+-#: cd-capplet.glade.h:1
++#: cd-capplet.glade.h:9
+ msgid "Run command when _DVD (video) is inserted"
+-msgstr "Wy_konanie polecenia po włożeniu płyty"
++msgstr "Wykonanie polecenia po włożeniu płyty"
+ 
+-#: cd-capplet.glade.h:1
++#: cd-capplet.glade.h:10
+ msgid "Run command when _blank CD is inserted"
+-msgstr "Wyk_onanie polecenia po włożeniu płyty"
++msgstr "Wykonanie polecenia po włożeniu płyty"
+ 
+-#: cd-capplet.glade.h:1
+-msgid "Start _auto-run program on newly mounted CD"
++#: cd-capplet.glade.h:11
++msgid "Run command when a_udio CD is inserted"
++msgstr "Wykonanie polecenia po włożeniu płyty"
++
++#: cd-capplet.glade.h:12
++msgid "Start _auto-run program on newly mounted discs"
+ msgstr "_Automatyczne uruchomienie programu \"auto-run\" po zamontowaniu płyty"
+ 
+-#: cd-capplet.glade.h:1
+-msgid "_Mount CD when inserted"
++#: cd-capplet.glade.h:13
++msgid "_Mount discs when inserted"
+ msgstr "Mon_towanie płyty po włożeniu"
+ 
+ #: gnome-cd-properties.desktop.in.h:1
+-msgid "CD Properties"
+-msgstr "Obsługa płyt CD"
++msgid "CD and DVD Properties"
++msgstr "Obsługa płyt CD i DVD"
+ 
+ #: gnome-cd-properties.desktop.in.h:1
+ msgid "Configure handling of CD devices"
