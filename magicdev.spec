@@ -1,27 +1,23 @@
-%define		snap	20031220
-
 Summary:	User-space device-watching daemon that runs within the GNOME desktop
 Summary(pl):	Demon ¶ledz±cy urz±dzenia dzia³aj±cy na pulpicie GNOME
 Name:		magicdev
-Version:	1.1.4
-Release:	1.%{snap}.1
+Version:	1.1.5
+Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	%{name}-%{version}-%{snap}.tar.bz2
-# Source0-md5:	99859fe28b2dbcbb2483cd461d253ab0
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/1.1/%{name}-%{version}.tar.bz2
+# Source0-md5:	47dabd2a45c07faa1217524ffe581087
 Patch0:		%{name}-default-dvd-player.patch
 Patch1:		%{name}-blacklist.patch
-Patch2:		%{name}-pl.patch
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.2.0
+BuildRequires:	GConf2-devel >= 2.4.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	esound-devel >= 0.2.26
 BuildRequires:	gettext
 BuildRequires:	intltool
 BuildRequires:	libglade2-devel >= 2.0.0
-BuildRequires:	libgnome >= 2.0.0
-BuildRequires:	libgnomeui-devel >= 2.2.0
+BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-build >= 4.1-10
@@ -42,10 +38,9 @@ dzia³aj±cy na pulpicie GNOME. Jego mo¿liwo¶ci obejmuj±:
 - uruchamianie podanego polecenia po w³o¿eniu p³yty d¼wiêkowej CD.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
 rm -f missing
@@ -87,5 +82,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/gconf/schemas/*
 %{_datadir}/gnome/capplets/gnome-cd-properties.desktop
-%dir %{_datadir}/%{name}
-%{_datadir}/%{name}/*.glade
+%{_datadir}/%{name}
