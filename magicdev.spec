@@ -8,6 +8,7 @@ License:	GPL
 Group:		Daemons
 Source0:	%{name}-%{version}-%{snap}.tar.bz2
 # Source0-md5:	47d43420f03bf9acbbbbcab408d2e781
+Patch0:		%{name}-default-dvd-player.patch
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -29,6 +30,7 @@ Some features include:
 
 %prep
 %setup -q -n %{name}
+%patch0 -p1
 
 %build
 rm -f missing
