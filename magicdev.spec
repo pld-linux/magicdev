@@ -1,6 +1,7 @@
 %define		snap	20030922
 
-Summary:	User-space device-watching daemon that runs within the GNOME desktop.
+Summary:	User-space device-watching daemon that runs within the GNOME desktop
+Summary(pl):	Demon ¶ledz±cy urz±dzenia dzia³aj±cy na pulpicie GNOME
 Name:		magicdev
 Version:	1.1.4
 Release:	1.%{snap}.1
@@ -11,18 +12,18 @@ Source0:	%{name}-%{version}-%{snap}.tar.bz2
 Patch0:		%{name}-default-dvd-player.patch
 Patch1:		%{name}-blacklist.patch
 URL:		http://www.gnome.org/
+BuildRequires:	GConf2-devel >= 2.2.0
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext
-BuildRequires:	libtool
-BuildRequires:	awk
-BuildRequires:	pkgconfig
-BuildRequires:	GConf2-devel >= 2.2.0
 BuildRequires:	esound-devel >= 0.2.26
+BuildRequires:	gettext
+BuildRequires:	libglade2-devel >= 2.0.0
 BuildRequires:	libgnome >= 2.0.0
 BuildRequires:	libgnomeui-devel >= 2.2.0
-BuildRequires:	libglade2-devel >= 2.0.0
+BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRequires:	rpm-build >= 4.1-10
+Requires(post):	GConf2
 Requires:	gnome-mime-data
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,6 +33,11 @@ Some features include:
 - Auto-mounting removeable media on insertion
 - Launching a given command when an audio CD is inserted.
 
+%description -l pl
+Uruchamiany w przestrzeni u¿ytkownika demon ¶ledz±cy urz±dzenia
+dzia³aj±cy na pulpicie GNOME. Jego mo¿liwo¶ci obejmuj±:
+- automontowanie zmienialnych no¶ników po w³o¿eniu
+- uruchamianie podanego polecenia po w³o¿eniu p³yty d¼wiêkowej CD.
 
 %prep
 %setup -q -n %{name}
