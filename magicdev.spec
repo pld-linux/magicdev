@@ -4,7 +4,7 @@ Summary:	User-space device-watching daemon that runs within the GNOME desktop
 Summary(pl):	Demon ¶ledz±cy urz±dzenia dzia³aj±cy na pulpicie GNOME
 Name:		magicdev
 Version:	1.1.4
-Release:	1.%{snap}.1
+Release:	1.%{snap}.2
 License:	GPL
 Group:		Applications/System
 Source0:	%{name}-%{version}-%{snap}.tar.bz2
@@ -64,6 +64,10 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
+install -d $RPM_BUILD_ROOT%{_datadir}/gnome/capplets
+mv $RPM_BUILD_ROOT%{_datadir}/control-center-2.0/capplets/*.desktop $RPM_BUILD_ROOT%{_datadir}/gnome/capplets/
+
+
 %find_lang %{name} --with-gnome --all-name
 
 %clean
@@ -77,5 +81,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/gconf/schemas/*
-%{_datadir}/control-center-2.0/capplets/gnome-cd-properties.desktop
+%{_datadir}/gnome/capplets/gnome-cd-properties.desktop
 %{_datadir}/%{name}/*.glade
