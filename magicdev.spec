@@ -1,14 +1,14 @@
-%define		snap	20030922
+%define		snap	20031122
 
 Summary:	User-space device-watching daemon that runs within the GNOME desktop
 Summary(pl):	Demon ¶ledz±cy urz±dzenia dzia³aj±cy na pulpicie GNOME
 Name:		magicdev
 Version:	1.1.4
-Release:	1.%{snap}.2
+Release:	1.%{snap}.1
 License:	GPL
 Group:		Applications/System
 Source0:	%{name}-%{version}-%{snap}.tar.bz2
-# Source0-md5:	47d43420f03bf9acbbbbcab408d2e781
+# Source0-md5:	fdc948a2ab0cc3d0c8516e926592bced
 Patch0:		%{name}-default-dvd-player.patch
 Patch1:		%{name}-blacklist.patch
 URL:		http://www.gnome.org/
