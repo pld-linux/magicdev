@@ -2,7 +2,7 @@ Summary:	User-space device-watching daemon that runs within the GNOME desktop
 Summary(pl):	Demon ¶ledz±cy urz±dzenia dzia³aj±cy na pulpicie GNOME
 Name:		magicdev
 Version:	1.1.6
-Release:	4
+Release:	5
 License:	GPL
 Group:		Applications/System
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/1.1/%{name}-%{version}.tar.bz2
