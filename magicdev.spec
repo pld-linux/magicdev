@@ -1,19 +1,18 @@
 Summary:	User-space device-watching daemon that runs within the GNOME desktop
 Summary(pl):	Demon ¶ledz±cy urz±dzenia dzia³aj±cy na pulpicie GNOME
 Name:		magicdev
-Version:	1.1.5
+Version:	1.1.6
 Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/1.1/%{name}-%{version}.tar.bz2
-# Source0-md5:	47dabd2a45c07faa1217524ffe581087
+# Source0-md5:	ed2c3ea0258317b1760107475205fc77
 Patch0:		%{name}-default-dvd-player.patch
-Patch1:		%{name}-blacklist.patch
+Patch1:		%{name}-locale-names.patch
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.4.0
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	esound-devel >= 0.2.26
 BuildRequires:	gettext
 BuildRequires:	intltool
 BuildRequires:	libglade2-devel >= 2.0.0
@@ -42,6 +41,8 @@ dzia³aj±cy na pulpicie GNOME. Jego mo¿liwo¶ci obejmuj±:
 %patch0 -p1
 %patch1 -p1
 
+mv po/{no,nb}.po
+
 %build
 rm -f missing
 %{__aclocal}
@@ -66,7 +67,6 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_datadir}/gnome/capplets
 mv -f $RPM_BUILD_ROOT%{_datadir}/control-center-2.0/capplets/*.desktop \
 	$RPM_BUILD_ROOT%{_datadir}/gnome/capplets
-
 
 %find_lang %{name} --with-gnome --all-name
 
