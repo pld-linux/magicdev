@@ -17,6 +17,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	esound-devel >= 0.2.26
 BuildRequires:	gettext
+BuildRequires:	intltool
 BuildRequires:	libglade2-devel >= 2.0.0
 BuildRequires:	libgnome >= 2.0.0
 BuildRequires:	libgnomeui-devel >= 2.2.0
@@ -60,12 +61,14 @@ glib-gettextize --copy --force
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
 install -d $RPM_BUILD_ROOT%{_datadir}/gnome/capplets
-mv $RPM_BUILD_ROOT%{_datadir}/control-center-2.0/capplets/*.desktop $RPM_BUILD_ROOT%{_datadir}/gnome/capplets/
+mv -f $RPM_BUILD_ROOT%{_datadir}/control-center-2.0/capplets/*.desktop \
+	$RPM_BUILD_ROOT%{_datadir}/gnome/capplets
 
 
 %find_lang %{name} --with-gnome --all-name
@@ -82,4 +85,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/gconf/schemas/*
 %{_datadir}/gnome/capplets/gnome-cd-properties.desktop
+%dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*.glade
