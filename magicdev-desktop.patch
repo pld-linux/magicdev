@@ -1,0 +1,12 @@
+diff -ur magicdev-1.1.6.orig/gnome-cd-properties.desktop.in magicdev-1.1.6/gnome-cd-properties.desktop.in
+--- magicdev-1.1.6.orig/gnome-cd-properties.desktop.in	2004-02-24 17:33:26.000000000 +0100
++++ magicdev-1.1.6/gnome-cd-properties.desktop.in	2004-07-29 21:10:21.431962024 +0200
+@@ -6,7 +6,7 @@
+ Exec=gnome-cd-properties
+ Terminal=false
+ Type=Application
+-Categories=Application;Settings;X-Red-Hat-Base;
++Categories=GNOME;Application;Settings;
+ OnlyShowIn=GNOME;
+ X-GNOME-Bugzilla-Bugzilla=GNOME
+ X-GNOME-Bugzilla-Product=magicdev
