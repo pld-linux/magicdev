@@ -1,0 +1,13 @@
+diff -Nuard magicdev.orig/magicdev.schemas magicdev/magicdev.schemas
+--- magicdev.orig/magicdev.schemas	2003-01-10 04:16:10.000000000 +0100
++++ magicdev/magicdev.schemas	2003-09-22 03:18:16.000000000 +0200
+@@ -124,7 +124,8 @@
+ 	<applyto>/apps/magicdev/dvd_play_command</applyto>
+ 	<owner>magicdev</owner>
+ 	<type>string</type>
+-	<default>vlc dvd:%d</default>
++	<!-- <default>vlc dvd:%d</default> -->
++	<default>mplayer dvd://1</default>
+ 	<locale name="C">
+ 	  <short>DVD Play Command</short>
+ 	  <long>Command to run when a video DVD is inserted.</long>
