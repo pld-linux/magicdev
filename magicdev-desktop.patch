@@ -6,7 +6,7 @@ diff -ur magicdev-1.1.6.orig/gnome-cd-properties.desktop.in magicdev-1.1.6/gnome
  Terminal=false
  Type=Application
 -Categories=Application;Settings;X-Red-Hat-Base;
-+Categories=GNOME;Application;Settings;
++Categories=GTK;GNOME;Application;Settings;Capplet;
  OnlyShowIn=GNOME;
  X-GNOME-Bugzilla-Bugzilla=GNOME
  X-GNOME-Bugzilla-Product=magicdev
