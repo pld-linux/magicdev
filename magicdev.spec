@@ -1,4 +1,4 @@
-%define		snap	20031122
+%define		snap	20031220
 
 Summary:	User-space device-watching daemon that runs within the GNOME desktop
 Summary(pl):	Demon ¶ledz±cy urz±dzenia dzia³aj±cy na pulpicie GNOME
@@ -8,9 +8,10 @@ Release:	1.%{snap}.1
 License:	GPL
 Group:		Applications/System
 Source0:	%{name}-%{version}-%{snap}.tar.bz2
-# Source0-md5:	fdc948a2ab0cc3d0c8516e926592bced
+# Source0-md5:	99859fe28b2dbcbb2483cd461d253ab0
 Patch0:		%{name}-default-dvd-player.patch
 Patch1:		%{name}-blacklist.patch
+Patch2:		%{name}-pl.patch
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.2.0
 BuildRequires:	autoconf
@@ -44,6 +45,7 @@ dzia³aj±cy na pulpicie GNOME. Jego mo¿liwo¶ci obejmuj±:
 %setup -q -n %{name}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 rm -f missing
