@@ -5,20 +5,25 @@ Name:		magicdev
 Version:	1.1.4
 Release:	1.%{snap}.1
 License:	GPL
-Group:		Daemons
+Group:		Applications/System
 Source0:	%{name}-%{version}-%{snap}.tar.bz2
 # Source0-md5:	47d43420f03bf9acbbbbcab408d2e781
 Patch0:		%{name}-default-dvd-player.patch
+Patch1:		%{name}-blacklist.patch
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext
 BuildRequires:	libtool
+BuildRequires:	awk
+BuildRequires:	pkgconfig
 BuildRequires:	GConf2-devel >= 2.2.0
-BuildRequires:	ORBit2-devel >= 2.8.1
+BuildRequires:	esound-devel >= 0.2.26
+BuildRequires:	libgnome >= 2.0.0
 BuildRequires:	libgnomeui-devel >= 2.2.0
 BuildRequires:	libglade2-devel >= 2.0.0
 BuildRequires:	rpm-build >= 4.1-10
+Requires:	gnome-mime-data
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -31,6 +36,7 @@ Some features include:
 %prep
 %setup -q -n %{name}
 %patch0 -p1
+%patch1 -p1
 
 %build
 rm -f missing
