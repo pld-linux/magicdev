@@ -1,12 +1,12 @@
 Summary:	User-space device-watching daemon that runs within the GNOME desktop
 Summary(pl):	Demon ¶ledz±cy urz±dzenia dzia³aj±cy na pulpicie GNOME
 Name:		magicdev
-Version:	1.1.6
-Release:	5
+Version:	1.1.7
+Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/1.1/%{name}-%{version}.tar.bz2
-# Source0-md5:	ed2c3ea0258317b1760107475205fc77
+# Source0-md5:	9b1973a9220465a2ea1a9ee77dc0035d
 Patch0:		%{name}-default-dvd-player.patch
 Patch1:		%{name}-locale-names.patch
 Patch2:		%{name}-desktop.patch
@@ -66,9 +66,9 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
-install -d $RPM_BUILD_ROOT%{_datadir}/gnome/capplets
+install -d $RPM_BUILD_ROOT%{_desktopdir}
 mv -f $RPM_BUILD_ROOT%{_datadir}/control-center-2.0/capplets/*.desktop \
-	$RPM_BUILD_ROOT%{_datadir}/gnome/capplets
+	$RPM_BUILD_ROOT%{_desktopdir}
 
 %find_lang %{name} --with-gnome --all-name
 
@@ -83,5 +83,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/gconf/schemas/*
-%{_datadir}/gnome/capplets/gnome-cd-properties.desktop
+%{_desktopdir}/gnome-cd-properties.desktop
 %{_datadir}/%{name}
