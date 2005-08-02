@@ -1,12 +1,11 @@
-diff -urN aa/magicdev-1.1.6/configure.in magicdev-1.1.6/configure.in
---- aa/magicdev-1.1.6/configure.in	2004-02-25 15:46:40.000000000 +0100
-+++ magicdev-1.1.6/configure.in	2004-02-25 17:15:40.535938328 +0100
+--- magicdev-1.1.7.orig/configure.in	2004-07-22 14:39:51.000000000 +0200
++++ magicdev-1.1.7/configure.in	2005-08-03 20:24:51.061802096 +0200
 @@ -40,7 +40,7 @@
  AM_GCONF_SOURCE_2
  
  dnl Initialize gettext
--ALL_LINGUAS="am az be bn ca cs da de el es fi fr gl he hr hu id it ja lv ml mn ms nl nn no pl pt pt_BR ro ru sk sl sq sr sr@Latn sv tr uk vi wa zh_CN zh_TW"
-+ALL_LINGUAS="am az be bn ca cs da de el es fi fr gl he hr hu id it ja lv ml mn ms nb nl nn pl pt pt_BR ro ru sk sl sq sr sr@Latn sv tr uk vi wa zh_CN zh_TW"
+-ALL_LINGUAS="am az be bn ca cs da de el en_CA en_GB es fi fr gl he hr hu id is it ja lv mk ml mn ms nl nn no pa pl pt pt_BR ro ru sk sl sq sr sr@Latn sv tr uk vi wa zh_CN zh_TW"
++ALL_LINGUAS="am az be bn ca cs da de el en_CA en_GB es fi fr gl he hr hu id is it ja lv mk ml mn ms nb nl nn pa pl pt pt_BR ro ru sk sl sq sr sr@Latn sv tr uk vi wa zh_CN zh_TW"
  AM_GLIB_GNU_GETTEXT
  
  AC_CHECK_FUNCS(getline flockfile)
