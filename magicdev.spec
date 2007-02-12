@@ -1,5 +1,5 @@
 Summary:	User-space device-watching daemon that runs within the GNOME desktop
-Summary(pl):	Demon ¶ledz±cy urz±dzenia dzia³aj±cy na pulpicie GNOME
+Summary(pl.UTF-8):   Demon Å›ledzÄ…cy urzÄ…dzenia dziaÅ‚ajÄ…cy na pulpicie GNOME
 Name:		magicdev
 Version:	1.1.7
 Release:	1
@@ -31,11 +31,11 @@ Some features include:
 - Auto-mounting removeable media on insertion
 - Launching a given command when an audio CD is inserted.
 
-%description -l pl
-Uruchamiany w przestrzeni u¿ytkownika demon ¶ledz±cy urz±dzenia
-dzia³aj±cy na pulpicie GNOME. Jego mo¿liwo¶ci obejmuj±:
-- automontowanie zmienialnych no¶ników po w³o¿eniu
-- uruchamianie podanego polecenia po w³o¿eniu p³yty d¼wiêkowej CD.
+%description -l pl.UTF-8
+Uruchamiany w przestrzeni uÅ¼ytkownika demon Å›ledzÄ…cy urzÄ…dzenia
+dziaÅ‚ajÄ…cy na pulpicie GNOME. Jego moÅ¼liwoÅ›ci obejmujÄ…:
+- automontowanie zmienialnych noÅ›nikÃ³w po wÅ‚oÅ¼eniu
+- uruchamianie podanego polecenia po wÅ‚oÅ¼eniu pÅ‚yty dÅºwiÄ™kowej CD.
 
 %prep
 %setup -q
