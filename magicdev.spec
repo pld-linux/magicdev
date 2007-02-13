@@ -1,5 +1,5 @@
 Summary:	User-space device-watching daemon that runs within the GNOME desktop
-Summary(pl.UTF-8):   Demon śledzący urządzenia działający na pulpicie GNOME
+Summary(pl.UTF-8):	Demon śledzący urządzenia działający na pulpicie GNOME
 Name:		magicdev
 Version:	1.1.7
 Release:	1
